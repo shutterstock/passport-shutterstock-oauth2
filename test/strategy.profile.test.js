@@ -1,12 +1,12 @@
 /* global describe, it, expect, before */
 /* jshint expr: true */
 
-var GitHubStrategy = require('../lib/strategy');
+var ShutterstockStrategy = require('../lib/strategy');
 
 
 describe('Strategy#userProfile', function() {
     
-  var strategy =  new GitHubStrategy({
+  var strategy =  new ShutterstockStrategy({
       clientID: 'ABC123',
       clientSecret: 'secret'
     },
@@ -14,10 +14,10 @@ describe('Strategy#userProfile', function() {
   
   // mock
   strategy._oauth2.get = function(url, accessToken, callback) {
-    if (url != 'https://api.github.com/user') { return callback(new Error('wrong url argument')); }
+    if (url != 'https://api.shutterstock.com/v2/user') { return callback(new Error('wrong url argument')); }
     if (accessToken != 'token') { return callback(new Error('wrong token argument')); }
     
-    var body = '{ "login": "octocat", "id": 1, "name": "monalisa octocat", "email": "octocat@github.com", "html_url": "https://github.com/octocat" }';
+    var body = '{"user": {"customer_id": "1234567890", "first_name": "Anony", "full_name": "Anony Mouse", "id": "987654321", "last_name": "Mouse", "language": "fr", "organization_id": "654321", "username": "anonymouse"}}';
   
     callback(null, body, undefined);
   };
@@ -34,14 +34,12 @@ describe('Strategy#userProfile', function() {
     });
     
     it('should parse profile', function() {
-      expect(profile.provider).to.equal('github');
+      expect(profile.provider).to.equal('shutterstock');
       
-      expect(profile.id).to.equal('1');
-      expect(profile.username).to.equal('octocat');
-      expect(profile.displayName).to.equal('monalisa octocat');
-      expect(profile.profileUrl).to.equal('https://github.com/octocat');
-      expect(profile.emails).to.have.length(1);
-      expect(profile.emails[0].value).to.equal('octocat@github.com');
+      expect(profile.id).to.equal('987654321');
+      expect(profile.username).to.equal('anonymouse');
+      expect(profile.displayName).to.equal('Anony Mouse');
+      expect(profile.emails).to.not.exist;
     });
     
     it('should set raw property', function() {

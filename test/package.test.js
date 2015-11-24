@@ -2,7 +2,7 @@
 
 var strategy = require('..');
 
-describe('passport-github', function() {
+describe('passport-shutterstock-oauth2', function() {
     
   it('should export Strategy constructor directly from package', function() {
     expect(strategy).to.be.a('function');

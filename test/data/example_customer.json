@@ -1,6 +1,7 @@
 {
   "user": {
     "customer_id": "1234567890",
+    "email": "anony@mouse.com",
     "first_name": "Anony",
     "full_name": "Anony Mouse",
     "id": "987654321",

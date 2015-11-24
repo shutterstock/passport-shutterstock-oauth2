@@ -1,9 +1,10 @@
 {
   "user": {
-    "customer_id": "1234567890",
+    "contributor_id": "2271398",
+    "email": "anony@mouse.com",
     "first_name": "Anony",
     "full_name": "Anony Mouse",
-    "id": "987654321",
+    "id": "2271398",
     "last_name": "Mouse",
     "language": "fr",
     "organization_id": "654321",
