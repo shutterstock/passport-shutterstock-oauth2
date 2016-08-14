@@ -47,7 +47,7 @@ application:
     app.get('/auth/shutterstock',
       passport.authenticate('shutterstock'));
 
-    app.get('/auth/shutterstock/callback', 
+    app.get('/auth/shutterstock/callback',
       passport.authenticate('shutterstock', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
@@ -58,6 +58,12 @@ application:
 
 For a complete, working example, refer to the [login example](/examples/login).
 
+    $ export DEBUG="*passport*,*session*"
+    $ cd examples/login
+    $ npm install
+    $ npm start
+    $ open http://localhost:3000
+
 ## Tests
 
     $ npm install --dev
@@ -67,7 +73,7 @@ For a complete, working example, refer to the [login example](/examples/login).
 
 ## Credits
 
-  This strategy is based on Jared Hanson's GitHub strategy for passport:  
+  This strategy is based on Jared Hanson's GitHub strategy for passport:
   - [Jared Hanson](http://github.com/jaredhanson)
 
 ## License
