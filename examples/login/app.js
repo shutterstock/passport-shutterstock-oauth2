@@ -1,7 +1,9 @@
 'use strict';
-var express = require('express')
-  , passport = require('passport')
-  , ShutterstockStrategy = require('passport-shutterstock-oauth2').Strategy;
+var express = require('express');
+var passport = require('passport');
+var ShutterstockStrategy = require('../../').Strategy;
+// In your app:
+//var ShutterstockStrategy = require('passport-shutterstock-oauth2').Strategy;
 
 var SHUTTERSTOCK_CLIENT_ID = process.env.SHUTTERSTOCK_CLIENT_ID || '--insert-shutterstock-client-id-here--';
 var SHUTTERSTOCK_CLIENT_SECRET = process.env.SHUTTERSTOCK_CLIENT_SECRET || '--insert-shutterstock-client-secret-here--';
@@ -120,3 +122,4 @@ app.get('/logout', function(req, res){
 });
 
 app.listen(3000);
+console.log('Open http://localhost:3000');
