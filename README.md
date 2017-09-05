@@ -80,6 +80,6 @@ For a complete, working example, refer to the [login example](/examples/login).
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2015 Shutterstock <[http://shutterstock.com/](http://shutterstock.com/)>
+Copyright (c) 2015-2017 Shutterstock <[http://shutterstock.com/](http://shutterstock.com/)>
 
 Copyright (c) 2011-2015 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
