@@ -13,10 +13,10 @@
   "author": "Coders <coders@shutterstock.com>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/shutterstock/passport-shutterstock-oauth2.git"
+    "url": "https://github.com/shutterstock/passport-shutterstock-oauth2.git"
   },
   "bugs": {
-    "url": "http://github.com/shutterstock/passport-shutterstock-oauth2/issues"
+    "url": "https://github.com/shutterstock/passport-shutterstock-oauth2/issues"
   },
   "license": "MIT",
   "main": "./lib",
@@ -33,5 +33,16 @@
   },
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
-  }
+  },
+  "homepage": "https://github.com/shutterstock/passport-shutterstock-oauth2",
+  "contributors": [
+    "Jared Hanson <jaredhanson@gmail.com>",
+    "cesine <cesine@yahoo.com>",
+    "Andrew Newdigate <andrew@troupe.co>",
+    "Richard Littauer <richard.littauer@gmail.com>",
+    "Sergey Generalov <sergey@genbit.ru>",
+    "Rich Ragan <rragan@ebay.com>",
+    "Matt Bornski <matt@bornski.com>",
+    "Mikael Korpela <mikael@ihminen.org>"
+  ]
 }
